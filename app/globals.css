@@ -1,0 +1,3 @@
+@import "tailwindcss";
+:root{--background:#f8f5f0;--foreground:#2b211b;--primary:#5b3926;--accent:#d97732;--muted:#75685e;--card:#fffdf9;}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--background);color:var(--foreground);font-family:Arial,sans-serif}.container{width:min(1120px,calc(100% - 32px));margin:auto}.rtl{direction:rtl}

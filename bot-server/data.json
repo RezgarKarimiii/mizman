@@ -1,0 +1,239 @@
+{
+  "cafes": {
+    "1791201295647": {
+      "id": 1791201295647,
+      "name": "ذذذ",
+      "keyHash": "e0b3418e3c99d77bc85d2e75785c40c492dd152841e1fdc9aa44e6f3b4a568c0",
+      "chats": [
+        1924271042
+      ],
+      "codes": {},
+      "permanentCode": "MZ295647"
+    },
+    "1791390439870": {
+      "id": 1791390439870,
+      "name": "کافه 1791390439870",
+      "category": "cafe",
+      "rating": "۵.۰",
+      "reviewsCount": 1,
+      "image": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80",
+      "address": "تهران",
+      "phone": "",
+      "instagram": "",
+      "desc": "کافه‌ای دنج در سامانه میز من",
+      "tables": [
+        {
+          "id": 1,
+          "title": "میز ۱ اصلی",
+          "feature": "کنار پنجره"
+        }
+      ],
+      "menu": [
+        {
+          "name": "قهوه اسپرسو",
+          "price": "۶۰,۰۰۰ تومان"
+        }
+      ],
+      "expenses": [],
+      "keyHash": "17d9e9f0192c461c241b7e410074de50c58b95133bd2e216f7b2bd1fb8fa3e03",
+      "chats": [],
+      "codes": {},
+      "permanentCode": "MZ439870"
+    }
+  },
+  "reservations": {
+    "1791201402474": {
+      "id": 1791201402474,
+      "cafeId": 1791184451916,
+      "cafe": "تاتاا",
+      "code": "MZ-FB0VVP",
+      "customerName": "رزگار کریمی",
+      "phone": "09184600001",
+      "day": "سه‌شنبه ۱۴ مهر",
+      "time": "۱۶:۰۰ - ۱۷:۳۰",
+      "table": "میز 1",
+      "guestCount": 2,
+      "menu": "قهوه اسپرسو",
+      "orderTotal": 60000,
+      "coupon": "",
+      "discount": 0,
+      "dateISO": "",
+      "status": "لغو شده",
+      "createdAt": "2026-10-05T11:56:42.494Z",
+      "tokenHash": "32e273d4f2da849d506a9c5f3aebaaae5a1df72b0aefef32275fff1afab35793",
+      "msgs": [],
+      "updatedAt": 1791202123534
+    },
+    "1791201433253": {
+      "id": 1791201433253,
+      "cafeId": 1791201295647,
+      "cafe": "ذذذ",
+      "code": "MZ-M3DL0N",
+      "customerName": "رزگار کریمی",
+      "phone": "09184600001",
+      "day": "سه‌شنبه ۱۴ مهر",
+      "time": "۱۶:۰۰ - ۱۷:۳۰",
+      "table": "میز ۱",
+      "guestCount": 2,
+      "menu": "قهوه اسپرسو",
+      "orderTotal": 60000,
+      "coupon": "",
+      "discount": 0,
+      "dateISO": "",
+      "status": "تمام شد",
+      "createdAt": "2026-10-05T11:57:13.283Z",
+      "tokenHash": "a9c9bf979c01d5f802c8cd538f93d739c3e0e6617caea9e46d162cb2fd9b9643",
+      "msgs": [
+        {
+          "chat": 1924271042,
+          "mid": 11
+        }
+      ],
+      "updatedAt": 1791202364148
+    },
+    "1791201470889": {
+      "id": 1791201470889,
+      "cafeId": 1791201295647,
+      "cafe": "ذذذ",
+      "code": "MZ-PLLFF7",
+      "customerName": "رزگار کریمی",
+      "phone": "09184600001",
+      "day": "یکشنبه ۱۹ مهر",
+      "time": "۱۶:۰۰ - ۱۷:۳۰",
+      "table": "میز ۳",
+      "guestCount": 2,
+      "menu": "قهوه اسپرسو",
+      "orderTotal": 60000,
+      "coupon": "",
+      "discount": 0,
+      "dateISO": "",
+      "status": "لغو شده",
+      "createdAt": "2026-10-05T11:57:50.909Z",
+      "tokenHash": "3a1cd22409a55c06621f1b785d1877ef463df60ec7edb1b3260aa426432c715b",
+      "msgs": [
+        {
+          "chat": 1924271042,
+          "mid": 12
+        },
+        {
+          "chat": 1963705242,
+          "mid": 22
+        }
+      ],
+      "updatedAt": 1791202382796
+    },
+    "1791201674280": {
+      "id": 1791201674280,
+      "cafeId": 1791201295647,
+      "cafe": "ذذذ",
+      "code": "MZ-JY0R1I",
+      "customerName": "رزگار کریمی",
+      "phone": "09184600001",
+      "day": "پنجشنبه ۱۶ مهر",
+      "time": "۱۹:۰۰ - ۲۰:۳۰",
+      "table": "میز ۵",
+      "guestCount": 2,
+      "menu": "بدون پیش‌سفارش",
+      "orderTotal": 0,
+      "coupon": "",
+      "discount": 0,
+      "dateISO": "",
+      "status": "رد شده",
+      "createdAt": "2026-10-05T12:01:14.314Z",
+      "tokenHash": "b3ebf8aa34755a12b6317a8f00c38538c004462823f222ce117112fa78efd65e",
+      "msgs": [
+        {
+          "chat": 1924271042,
+          "mid": 13
+        }
+      ],
+      "updatedAt": 1791201953200
+    },
+    "1791202240169": {
+      "id": 1791202240169,
+      "cafeId": 1791201295647,
+      "cafe": "ذذذ",
+      "code": "MZ-KKSKRY",
+      "customerName": "رزگار کریمی",
+      "phone": "09184600001",
+      "day": "یکشنبه ۱۹ مهر",
+      "time": "۱۹:۰۰ - ۲۰:۳۰",
+      "table": "میز ۳",
+      "guestCount": 2,
+      "menu": "قهوه اسپرسو",
+      "orderTotal": 60000,
+      "coupon": "",
+      "discount": 0,
+      "dateISO": "",
+      "status": "لغو شده",
+      "createdAt": "2026-10-05T12:10:40.192Z",
+      "tokenHash": "76218f2518a340f6aa4570b13fb90d1d83c99d136aa5435c1c943696adecc964",
+      "msgs": [
+        {
+          "chat": 1963705242,
+          "mid": 23
+        }
+      ],
+      "updatedAt": 1791202384968
+    },
+    "1791202274043": {
+      "id": 1791202274043,
+      "cafeId": 1791201295647,
+      "cafe": "ذذذ",
+      "code": "MZ-K57PUT",
+      "customerName": "رزگار کریمی",
+      "phone": "09184600001",
+      "day": "سه‌شنبه ۱۴ مهر",
+      "time": "۱۹:۰۰ - ۲۰:۳۰",
+      "table": "میز ۱۲",
+      "guestCount": 2,
+      "menu": "قهوه اسپرسو",
+      "orderTotal": 60000,
+      "coupon": "",
+      "discount": 0,
+      "dateISO": "",
+      "status": "لغو شده",
+      "createdAt": "2026-10-05T12:11:14.075Z",
+      "tokenHash": "01fbe777856cb62b788325b61fa097fa7fe3899bf6b9a9406d45f6701f966eb7",
+      "msgs": [
+        {
+          "chat": 1963705242,
+          "mid": 24
+        }
+      ],
+      "updatedAt": 1791202386436
+    },
+    "1791202460131": {
+      "id": 1791202460131,
+      "cafeId": 1791201295647,
+      "cafe": "ذذذ",
+      "code": "MZ-52PGMX",
+      "customerName": "رزگار کریمی",
+      "phone": "09184600001",
+      "day": "سه‌شنبه ۱۴ مهر",
+      "time": "۱۹:۰۰ - ۲۰:۳۰",
+      "table": "میز ۵",
+      "guestCount": 2,
+      "menu": "بدون پیش‌سفارش",
+      "orderTotal": 0,
+      "coupon": "",
+      "discount": 0,
+      "dateISO": "",
+      "status": "تمام شد",
+      "createdAt": "2026-10-05T12:14:20.157Z",
+      "tokenHash": "046b46384a2f993bb65a1cb353df7fec88f94f137bb8469fb329553952064ae9",
+      "msgs": [
+        {
+          "chat": 1924271042,
+          "mid": 30
+        }
+      ],
+      "updatedAt": 1791203153695
+    }
+  },
+  "qrOrders": {},
+  "crmMessages": [],
+  "staff": [],
+  "attendance": [],
+  "offset": 860373707
+}

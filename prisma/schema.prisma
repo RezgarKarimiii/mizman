@@ -1,0 +1,157 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  CUSTOMER
+  MERCHANT
+  STAFF
+  ADMIN
+}
+
+model AppUser {
+  id           String    @id @default(cuid())
+  name         String
+  phone        String    @unique
+  email        String?
+  passwordHash String    @map("password_hash")
+  role         UserRole  @default(CUSTOMER)
+  cafeId       BigInt?   @map("cafe_id")
+  createdAt    DateTime  @default(now()) @map("created_at")
+
+  @@map("app_users")
+}
+
+model Cafe {
+  id            BigInt         @id
+  name          String
+  category      String         @default("cafe")
+  rating        String         @default("۵.۰")
+  reviewsCount  Int            @default(0) @map("reviews_count")
+  image         String?
+  address       String?
+  phone         String?
+  instagram     String?
+  description   String?
+  tablesJson    Json?          @default("[]") @map("tables_json")
+  menuJson      Json?          @default("[]") @map("menu_json")
+  expensesJson  Json?          @default("[]") @map("expenses_json")
+  keyHash       String?        @map("key_hash")
+  chatsJson     Json?          @default("[]") @map("chats_json")
+  permanentCode String?        @unique @map("permanent_code")
+  createdAt     DateTime       @default(now()) @map("created_at")
+  updatedAt     DateTime       @default(now()) @updatedAt @map("updated_at")
+
+  reservations  Reservation[]
+  qrOrders      QrOrder[]
+  crmMessages   CrmMessage[]
+  staffList     Staff[]
+
+  @@map("cafes")
+}
+
+model Reservation {
+  id           BigInt    @id
+  cafeId       BigInt    @map("cafe_id")
+  cafeName     String?   @map("cafe_name")
+  code         String
+  customerName String    @map("customer_name")
+  phone        String
+  day          String
+  time         String
+  dateIso      String?   @map("date_iso")
+  tableName    String    @map("table_name")
+  guestCount   Int       @default(2) @map("guest_count")
+  menu         String?   @default("بدون پیش‌سفارش")
+  orderTotal   BigInt    @default(0) @map("order_total")
+  coupon       String?
+  discount     BigInt    @default(0)
+  status       String    @default("در انتظار تایید کافه")
+  tokenHash    String?   @map("token_hash")
+  msgsJson     Json?     @default("[]") @map("msgs_json")
+  createdAt    DateTime  @default(now()) @map("created_at")
+  updatedAt    DateTime  @default(now()) @updatedAt @map("updated_at")
+
+  cafe         Cafe      @relation(fields: [cafeId], references: [id], onDelete: Cascade)
+
+  @@index([cafeId])
+  @@index([phone])
+  @@index([dateIso])
+  @@index([status])
+  @@map("reservations")
+}
+
+model QrOrder {
+  id           String    @id
+  code         String
+  cafeId       BigInt    @map("cafe_id")
+  cafeName     String?   @map("cafe_name")
+  tableName    String    @map("table_name")
+  customerName String?   @default("مهمان") @map("customer_name")
+  phone        String?
+  itemsJson    Json?     @default("[]") @map("items_json")
+  total        BigInt    @default(0)
+  note         String?
+  status       String    @default("جدید")
+  createdAt    DateTime  @default(now()) @map("created_at")
+  updatedAt    DateTime  @default(now()) @updatedAt @map("updated_at")
+
+  cafe         Cafe      @relation(fields: [cafeId], references: [id], onDelete: Cascade)
+
+  @@index([cafeId])
+  @@index([status])
+  @@map("qr_orders")
+}
+
+model CrmMessage {
+  id              String    @id
+  cafeId          BigInt    @map("cafe_id")
+  cafeName        String?   @map("cafe_name")
+  phone           String?
+  customerName    String?   @map("customer_name")
+  title           String
+  message         String
+  discountPercent Int       @default(0) @map("discount_percent")
+  createdAt       DateTime  @default(now()) @map("created_at")
+
+  cafe            Cafe      @relation(fields: [cafeId], references: [id], onDelete: Cascade)
+
+  @@index([cafeId])
+  @@index([phone])
+  @@map("crm_messages")
+}
+
+model Staff {
+  id          String       @id
+  cafeId      BigInt       @map("cafe_id")
+  name        String
+  phone       String
+  dept        String       @default("سالن")
+  title       String?
+  createdAt   DateTime     @default(now()) @map("created_at")
+
+  cafe        Cafe         @relation(fields: [cafeId], references: [id], onDelete: Cascade)
+  attendance  Attendance[]
+
+  @@index([cafeId])
+  @@map("staff")
+}
+
+model Attendance {
+  id        Int       @id @default(autoincrement())
+  staffId   String    @map("staff_id")
+  date      String
+  timeIn    String?   @map("time_in")
+  timeOut   String?   @map("time_out")
+  createdAt DateTime  @default(now()) @map("created_at")
+
+  staff     Staff     @relation(fields: [staffId], references: [id], onDelete: Cascade)
+
+  @@unique([staffId, date])
+  @@map("attendance")
+}
